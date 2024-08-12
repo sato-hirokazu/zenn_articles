@@ -4,14 +4,14 @@ topics: ["aws"]
 published: false
 price: 0 
 chapters:
-  - example1
-  - example2
-  - example3
-  - example4
-  - example5
-  - example6
-  - example7
-  - example8
-  - example9
-  - example10
+  - chapter1
+  - chapter2
+  - chapter3
+  - chapter4
+  - chapter5
+  - chapter6
+  - chapter7
+  - chapter8
+  - chapter9
+  - chapter10
 toc_depth: 1
