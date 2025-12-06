@@ -1,0 +1,19 @@
+title: "キャッシュレスを支える技術"
+summary: >
+  キャッシュレス決済の仕組みを、エンジニアの視点からやさしく解説します。
+  クレジットカードや電子マネー、QR決済などで「お金が動く」とはどういうことか。
+  台帳・トランザクション・オーソリ・清算など、普段は見えない技術の裏側を、
+  Kotlinのコード例や図解を交えて学べる1冊です。
+topics: ["fintech", "payment", "kotlin", "system-design"]
+published: false
+price: 0 # 有料の場合200〜5000
+chapters:
+  - 00-introduction
+  - 01-overview
+  - 02-authorization
+  - 03-ledger
+  - 04-infrastructure
+  - 05-transaction-safety
+  - 06-legal
+  - 07-future
+toc_depth: 1
