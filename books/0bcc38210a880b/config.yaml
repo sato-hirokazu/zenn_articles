@@ -5,7 +5,7 @@ summary: >
   台帳・トランザクション・オーソリ・清算など、普段は見えない技術の裏側を、
   Kotlinのコード例や図解を交えて学べる1冊です。
 topics: ["fintech", "payment", "kotlin", "system-design"]
-published: false
+published: true
 price: 0 # 有料の場合200〜5000
 chapters:
   - 00-introduction
