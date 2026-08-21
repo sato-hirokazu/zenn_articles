@@ -1,0 +1,23 @@
+title: "育てるClaude Code"
+summary: >
+  AI駆動開発の品質を、どう担保するか。
+  一度作って終わりにせず、使いながら育てていくための考え方と仕組みを、現場で使える形で解説します。
+topics: ["claudecode", "ai", "品質保証", "codereview", "開発プロセス"]
+published: false
+price: 200 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - example1
+  - example2
+  - example3
+  - example4
+  - example5
+  - example6
+  - example7
+  - example8
+  - example9
+  - example10
+  - example11
+  - example12
+  - example13
+toc_depth: 2
