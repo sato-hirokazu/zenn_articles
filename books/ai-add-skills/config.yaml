@@ -4,7 +4,7 @@ summary: >
   一度作って終わりにせず、使いながら育てていくための考え方と仕組みを、現場で使える形で解説します。
 topics: ["claudecode", "ai", "品質保証", "codereview", "開発プロセス"]
 published: false
-price: 200 # 有料の場合200〜5000
+price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
 chapters:
   - example1
