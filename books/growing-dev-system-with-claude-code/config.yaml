@@ -7,19 +7,19 @@ published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
 chapters:
-  - example1
-  - example2
-  - example3
-  - example4
-  - example5
-  - example6
-  - example7
-  - example8
-  - example9
-  - example10
-  - example11
-  - example12
-  - example13
-  - example14
-  - example15
+  - 00-preface
+  - 01-review-bottleneck
+  - 02-four-roles-of-review
+  - 03-deciding-not-to-build
+  - 04-codifying-norms
+  - 05-disposable-docs-and-granularity
+  - 06-risk-based-review
+  - 07-review-skill-and-harness
+  - 08-growing-review-perspectives
+  - 09-update-detection-and-approval
+  - 10-tests-and-static-analysis-gates
+  - 11-recovering-from-failures
+  - 12-detecting-degradation
+  - 13-designing-outside-the-model
+  - 14-developers-after-implementation
 toc_depth: 2
