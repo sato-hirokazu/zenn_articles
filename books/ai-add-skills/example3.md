@@ -15,7 +15,7 @@ title: "第2章 コードレビューが兼ねていた4つの役割"
 
 ## コードレビューは何をしていたのか
 
-mtx2s氏の記事「AIコーディング時代のコードレビュー」では、コードレビューが担ってきた役割が4つに整理されています。
+AIコーディング時代のレビューを論じた記事では、コードレビューが担ってきた役割が4つに整理されています。
 本書はこの整理を出発点として借用します。
 
 ### 役割1 変更容易性の維持
@@ -110,7 +110,7 @@ AIが書き、AIがレビューし、テストが通ってマージされる。
 動いているので問題は表面化しません。
 表面化するのは障害が起きたときです。
 
-freee社の開発者ブログでは、AI駆動開発を認知科学の観点から論じるなかで、この状態を「認知負債」として説明しています。
+認知科学の観点から論じた記事では、AI駆動開発を認知科学の観点から論じるなかで、この状態を「認知負債」として説明しています。
 理解されていないコードが積み上がっていく負債です。
 技術的負債は「構造が悪いコード」ですが、認知負債は「構造は良いかもしれないが誰も内容を把握していないコード」です。
 返済方法も違います。
@@ -127,7 +127,7 @@ AIは謝罪できません。
 責任も取れません。
 これは能力の問題ではなく、責任という概念の構造の問題です。
 
-LayerX社の榎本氏の資料では、「あなたは責任を取り続けられるか」という問いが提示されています。
+機能追加の判断を論じた登壇資料では、「あなたは責任を取り続けられるか」という問いが提示されています。
 そして「AIで増幅された間違い探しを、他のメンバーとユーザーに負わせるな」という指摘があります。
 この2つは同じことを言っています。
 生成量が増えれば、検証されていない変更の量も増えます。
@@ -149,7 +149,7 @@ LayerX社の榎本氏の資料では、「あなたは責任を取り続けら�
 役割の壊れ方が違うのですから、対処も一箇所では足りません。
 「レビューをAIに任せる」という単一の打ち手では、変更容易性と品質保証の一部しか回収できません。
 
-mtx2s氏の記事では、この課題への対処が4段階のアプローチとして整理されています。
+AIコーディング時代のレビューを論じた記事では、この課題への対処が4段階のアプローチとして整理されています。
 本書はこの4段階を骨格として採用します。
 
 ```text
@@ -246,7 +246,7 @@ AIは指示に従うので、指示の質がそのまま出力の質になりま
 
 ### 原則1 境界を設計する
 
-ZOZO社の技術ブログでは、Claude Codeを使ったアーキテクチャ図生成の取り組みが紹介されています。
+アーキテクチャ図を生成した事例の記事では、Claude Codeを使ったアーキテクチャ図生成の取り組みが紹介されています。
 この事例で示されているのは、ツールの使い方そのものより、「何を人間が管理し、何をAIに委ねるか」の境界設計が核心だということです。
 
 境界が曖昧だと、両方が中途半端になります。
@@ -255,7 +255,7 @@ ZOZO社の技術ブログでは、Claude Codeを使ったアーキテクチャ�
 
 ### 原則2 コンテキストを推論可能な幅に収める
 
-リクルート社の黒田氏の資料では、AI駆動開発の成功事例に共通する条件が示されています。
+品質保証の再設計を論じた講演資料では、AI駆動開発の成功事例に共通する条件が示されています。
 それは「一つの変更に必要なコンテキストを、AIが誤りなく推論できる幅に収める」ことです。
 
 そして、操作できるレバーは2つしかないと整理されています。
@@ -321,8 +321,8 @@ AIに委譲できないというより、委譲するという概念が成立し
 
 ## 参考
 
-- mtx2s「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
-- freee Developers Hub「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
-- LayerX「Don't build features. Don't take the easy way out.」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
-- ZOZO TECH BLOG「Claude Codeを活用したアーキテクチャ図の生成」 [https://techblog.zozo.com/entry/architecture-diagram-with-claude-code](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
-- リクルート 黒田氏「Developers Summit 2026 Summer 講演資料」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+- 「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
+- 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
+- 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
+- 「Claude Codeを活用したアーキテクチャ図の生成」 [https://techblog.zozo.com/entry/architecture-diagram-with-claude-code](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
+- 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)

@@ -23,14 +23,14 @@ AIレビューは使えるか使えないか。
 この立て方が間違っています。
 実務で成立するのは、対象によって配分を変える設計です。
 
-mtx2s氏の記事では、現時点の到達点について「AIによるコードレビューだけで、すべての問題を安定的に検出できるとは言いがたい」と述べられています。
+AIコーディング時代のレビューを論じた記事では、現時点の到達点について「AIによるコードレビューだけで、すべての問題を安定的に検出できるとは言いがたい」と述べられています。
 そして、特に仕様意図や文脈依存的な知識が関わる領域では、人間の役割が残ると指摘されています。
 
 これは「AIレビューは使えない」という結論ではありません。
 安定的に検出できる領域と、そうでない領域があるという指摘です。
 だから配分の問題になります。
 
-MonotaRO社の技術ブログでは、AIコードレビューの導入事例が報告されています。
+AIレビューを導入した事例の記事では、AIコードレビューの導入事例が報告されています。
 この事例で主題として置かれているのは、AIレビューを導入するかどうかではなく、単なるノイズではない価値あるAIレビューをどう実現するかでした。
 導入は前提であり、そのうえで指摘の質をどう担保するかが実際の課題になっています。
 
@@ -40,7 +40,7 @@ MonotaRO社の技術ブログでは、AIコードレビューの導入事例が�
 ## 線引きの3つの判断軸
 
 では、何を基準に配分を決めるのでしょうか。
-メルペイの梅津雄哉氏の資料では、Human-in-the-Loopの設計を決める判断軸として3つが挙げられています。
+自己改善サイクルの登壇資料では、Human-in-the-Loopの設計を決める判断軸として3つが挙げられています。
 クリティカル性、検出可能性、可逆性です。
 そして、これらを単独ではなく複合的に考慮することが条件になります。
 本書はこの3軸を線引きの基準として採用します。
@@ -221,7 +221,7 @@ AIが書いたかどうかは関係ありません。
 
 ### 形式的な承認と説明責任
 
-neko3cs氏の記事では、この先の変化についてより踏み込んだ論点が提示されています。
+役割の消滅を論じた記事では、この先の変化についてより踏み込んだ論点が提示されています。
 AIが実装だけでなく設計層まで担うようになると、品質担保の責任の形が変わりうるという指摘です。
 従来はエキスパートの判断が品質を担保していました。
 それがAIの出力結果への人的承認へとシフトする。
@@ -252,7 +252,7 @@ AIが実装だけでなく設計層まで担うようになると、品質担保
 
 人間が見る領域を決めたら、次はそこで人間が実際に見られるようにする必要があります。
 必須にしても見られなければ、形式的な承認になります。
-freee社の開発者ブログでは、この問題が認知科学の観点から論じられています。
+認知科学の観点から論じた記事では、この問題が認知科学の観点から論じられています。
 
 ひとつめの論点は、レビュー可能性を上げる工夫です。
 生成物をそのまま渡すのではなく「判断単位」に分割し、図表とセグメント化によって外在性の認知負荷を削減するという発想で、記事ではツールの構想として紹介されています。
@@ -369,18 +369,18 @@ AIレビューの指摘を却下することは正当な判断です。
 
 ## この章のまとめ
 
-- AIレビューの是非を二択で論じるのではなく、対象ごとに配分を決める設計問題として扱います。mtx2s氏の指摘のとおり、AIだけですべての問題を安定的に検出できるとは言いがたい一方で、安定的に検出できる領域は確実に存在します
-- 線引きの判断軸は、メルペイの梅津氏の資料が示すクリティカル性、検出可能性、可逆性の3つです。単独ではなく複合的に考慮し、AIに任せる領域、AIが指摘し人間が判断する領域、人間が見る領域、レビューでは防がず本番の回復性で受ける領域の4つに切り分けます
+- AIレビューの是非を二択で論じるのではなく、対象ごとに配分を決める設計問題として扱います。AIコーディング時代のレビューを論じた記事の指摘のとおり、AIだけですべての問題を安定的に検出できるとは言いがたい一方で、安定的に検出できる領域は確実に存在します
+- 線引きの判断軸は、自己改善サイクルの登壇資料が示すクリティカル性、検出可能性、可逆性の3つです。単独ではなく複合的に考慮し、AIに任せる領域、AIが指摘し人間が判断する領域、人間が見る領域、レビューでは防がず本番の回復性で受ける領域の4つに切り分けます
 - 検出可能性は問題の種類と差分のサイズで決まります。判断材料が差分の中にあるものはAIが安定して検出でき、コード外の運用制約に依存するものは検出できません
 - 可逆性の原則は単純です。戻せないものは人間が必ず見ます。データマイグレーションや外部への露出は、事後の検知と復旧という選択肢が使えないため、事前のレビューが唯一の防御線になります
 - 線引きをしても責任は分割できません。承認が形式化した時点で第2章の説明責任は失われ、認知負債が隠されます。要件は承認する人が中身を理解していることであり、そのためにワーキングメモリの制約を踏まえて渡す判断の数を絞ります
 
 ## 参考
 
-- mtx2s「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
-- MonotaRO Tech Blog「AIコードレビューの取り組み」 [https://tech-blog.monotaro.com/entry/2026/08/05/090000](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
-- メルペイ 梅津雄哉氏「修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル」 [https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
-- リクルート 黒田氏「Developers Summit 2026 Summer 講演資料」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
-- LayerX「Don't build features. Don't take the easy way out.」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
-- neko3cs「AI時代にアーキテクトとテックリードは死んだのか」 [https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era](https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era)
-- freee Developers Hub「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
+- 「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
+- 「AIコードレビューの取り組み」 [https://tech-blog.monotaro.com/entry/2026/08/05/090000](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
+- 「修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル」 [https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
+- 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+- 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
+- 「AI時代にアーキテクトとテックリードは死んだのか」 [https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era](https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era)
+- 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)

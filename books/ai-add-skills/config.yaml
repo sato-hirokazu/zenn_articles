@@ -1,4 +1,4 @@
-title: "育てるClaude Code"
+title: "レビューが詰まった後の品質保証 〜Claude Codeで育てる開発の仕組み〜"
 summary: >
   AI駆動開発の品質を、どう担保するか。
   一度作って終わりにせず、使いながら育てていくための考え方と仕組みを、現場で使える形で解説します。
@@ -20,4 +20,6 @@ chapters:
   - example11
   - example12
   - example13
+  - example14
+  - example15
 toc_depth: 2

@@ -13,7 +13,7 @@ title: "第9章 更新候補の自動検出と承認プロセス"
 
 ## サイクルの入口にある負荷
 
-メルペイの梅津雄哉氏の資料でも、この点が課題として明示されています。
+自己改善サイクルの登壇資料でも、この点が課題として明示されています。
 手動での更新は運用負荷が高い、という認識です。
 より具体的には「修正PRを都度見逃さずスキルに反映する」ことの負荷が問題でした。
 この負荷を分解すると、3つの作業が混ざっています。
@@ -39,9 +39,9 @@ title: "第9章 更新候補の自動検出と承認プロセス"
 ここでも同じことをします。
 監視と想起を機械に渡し、人間には実行と判断だけを残します。
 
-## 梅津氏の週次ワークフロー
+## 週次ワークフローの構成
 
-梅津氏の資料では、この入口を GitHub Actions で自動化する構成が示されています。
+同資料では、この入口を GitHub Actions で自動化する構成が示されています。
 毎週月曜に GitHub Actions が実行され、先週マージされたPRの中から修正対象と思われるものを自動検出します。
 検出された候補は Slack に自動通知され、チームで共有されます。
 メンバーは通知を確認したうえで `/improve-review-pr` を実行します。
@@ -275,7 +275,7 @@ jobs:
 ## 承認プロセスの設計
 
 検出を自動化しても、承認は残します。
-第8章で見たとおり、梅津氏の資料が挙げる Human-in-the-Loop の理由は3つあり、そのうち見落とされやすいのは「チームの知識として定着させる機会を作る」ことです。
+第8章で見たとおり、自己改善サイクルの登壇資料が挙げる Human-in-the-Loop の理由は3つあり、そのうち見落とされやすいのは「チームの知識として定着させる機会を作る」ことです。
 承認は品質のチェックだけではなく、「こういう漏れがあったから、こういう観点を追加する」という会話が発生する場そのものに価値があります。
 自動更新にすると、この会話が消えます。
 
@@ -319,7 +319,7 @@ jobs:
 
 通知だけ作っても、それを見る時間が確保されていなければ流れます。
 既存の定例に組み込みます。
-Uzabase社の記事では、スプリントレビューの中に学習共有の時間を5分確保するという実践が紹介されています。
+ボトルネックの移動を論じた記事では、スプリントレビューの中に学習共有の時間を5分確保するという実践が紹介されています。
 学びを共有する場を、意図をもって短く確保するという発想です。
 
 この形はレビュー観点の更新候補の確認にそのまま使えます。
@@ -367,7 +367,7 @@ SKILL.md 更新PRのテンプレートに置きます。
 
 この章の仕組みは、cron で起動して Slack に通知する形でした。
 もう一段先の形があります。
-LayerX社の Agent 基盤 Haro の資料では、入口を統一する設計が示されています。
+Agent基盤を自作した事例の登壇資料では、入口を統一する設計が示されています。
 WebUI、HTTP API、CLI、Slack、Webhook、cron、Mail といった複数の入口を、単一のエントリーポイントに集約する構成です。
 そのうえで、イベント駆動で起動する Ambient Agent への展開が語られています。
 チャット起点ではない自律稼働を目指す方向です。
@@ -453,14 +453,14 @@ Marketplace を通じて、個人の自動化を組織の資産に転換する�
 
 ## この章のまとめ
 
-- 良い自己改善サイクルが回らない理由は、たいてい入口にあります。梅津氏の資料が課題として挙げるとおり、負荷の実体は実行ではなく監視と想起です。この2つは業務のタスクリストに現れないため、善意に依存させると必ず摩耗します
-- 梅津氏の週次ワークフローは、毎週月曜に GitHub Actions で先週マージされたPRを走査し、複合条件で修正対象を検出して Slack に通知する構成です。単一のキーワード一致ではなく、「fix を含み、かつ新機能追加ではない」といった否定条件を含む複合判定になっています
+- 良い自己改善サイクルが回らない理由は、たいてい入口にあります。自己改善サイクルの登壇資料が課題として挙げるとおり、負荷の実体は実行ではなく監視と想起です。この2つは業務のタスクリストに現れないため、善意に依存させると必ず摩耗します
+- 同資料の週次ワークフローは、毎週月曜に GitHub Actions で先週マージされたPRを走査し、複合条件で修正対象を検出して Slack に通知する構成です。単一のキーワード一致ではなく、「fix を含み、かつ新機能追加ではない」といった否定条件を含む複合判定になっています
 - 検出は再現率に寄せます。出力が候補の提示に過ぎず、下流に人間の確認とAIの分析があるため、誤検出のコストは数十秒、取りこぼしのコストは学習機会の永久喪失という非対称があります。ただし通知に出す件数は確信度で絞り、第1章のノイズレビューと同じ失敗を避けます
 - 判定は決定論的なスクリプトにし、生成AIを入れません。検出は再現性、分析は文脈理解、承認は説明責任という役割分担を固定します。SKILL.md の更新をPRとして出せば、観点の由来と却下理由が git の履歴に残ります
-- 自動化していいのは検出と起案までで、承認は残します。LayerX社の Haro が示す Ambient Agent の方向に寄せるほど起案の量が増えるため、承認の質が全体の品質を決めます。完全自動更新は、誰も把握していない観点を増殖させる劣化装置になります
+- 自動化していいのは検出と起案までで、承認は残します。同資料が示す Ambient Agent の方向に寄せるほど起案の量が増えるため、承認の質が全体の品質を決めます。完全自動更新は、誰も把握していない観点を増殖させる劣化装置になります
 
 ## 参考
 
-- メルペイ 梅津雄哉氏「修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル」 [https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
-- LayerX「Built our own Background Agent at LayerX」 [https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
-- Uzabase Agile Journey [https://agilejourney.uzabase.com/entry/2026/04/23/103000](https://agilejourney.uzabase.com/entry/2026/04/23/103000)
+- 「修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル」 [https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
+- 「Built our own Background Agent（Agent基盤の自作）」 [https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
+- ボトルネックの移動と「着眼大局、着手小局」を論じた記事 [https://agilejourney.uzabase.com/entry/2026/04/23/103000](https://agilejourney.uzabase.com/entry/2026/04/23/103000)

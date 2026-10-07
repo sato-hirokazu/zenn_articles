@@ -24,7 +24,7 @@ title: "第11章 障害から戻せるようにする"
 第6章で確認したとおり、それはAIが最も苦手な領域です。
 つまり最後の数パーセントは、人間の時間で買うしかありません。
 
-mtx2s氏の記事は、この行き詰まりに対して別の投資先を示しています。
+AIコーディング時代のレビューを論じた記事は、この行き詰まりに対して別の投資先を示しています。
 完全な故障防止を目指すのではなく、素早い検知と復旧を設計するという主張です。
 同記事はMTTR（平均復旧時間）を短縮する価値を柱に置いています。
 故障を減らす投資と、故障の継続時間を減らす投資は、どちらも可用性に効きます。
@@ -81,7 +81,7 @@ mtx2s氏の記事は、この行き詰まりに対して別の投資先を示し
 
 ## 戻せるようにする3つの要素
 
-mtx2s氏の記事は、4段階目にあたる要素として段階的展開、高速ロールバック、可観測性を挙げています。
+AIコーディング時代のレビューを論じた記事は、4段階目にあたる要素として段階的展開、高速ロールバック、可観測性を挙げています。
 順に具体化します。
 
 ### 段階的展開で影響範囲を絞る
@@ -101,7 +101,7 @@ mtx2s氏の記事は、4段階目にあたる要素として段階的展開、�
 
 ここで警告を挟みます。
 フィーチャーフラグは、放置すると品質を下げる方向に働きます。
-LayerX社の榎本氏の資料は、第3章で扱ったとおり、一部の利用者のために設定のON/OFFを増やすことを「明確にNo」としています。
+機能追加の判断を論じた登壇資料は、第3章で扱ったとおり、一部の利用者のために設定のON/OFFを増やすことを「明確にNo」としています。
 設定自体が認知コストであり、設定分岐による動作確認は永遠に苦しむという指摘です。
 この指摘はフィーチャーフラグにそのまま当てはまります。
 フラグが1つ増えれば、検証すべき状態の組み合わせが2倍になります。
@@ -240,12 +240,12 @@ Step 1から4は、どの時点で問題が起きても1段階戻せば元に戻
 ## AIを検知と復旧の側に使う
 
 生成側にAIを入れたのなら、受け止める側にも入れる余地があります。
-リクルート社の黒田氏の資料には、AI-OPSの事例が示されています。
+品質保証の再設計を論じた講演資料には、AI-OPSの事例が示されています。
 アラート起点の障害調査を、エスカレーションから問題報告まで一気通貫で行う取り組みです。
 同資料はこれを「受け止める側の仕事にも有効」と評価しています。
 生成の効率化と対になる投資として位置づけられています。
 
-LayerX社のAgent基盤 Haro の事例は、この用途に合わせたアーキテクチャを示しています。
+Agent基盤を自作した事例は、この用途に合わせたアーキテクチャを示しています。
 同社の基盤は2種類のエージェントを持ちます。
 
 - **環境を持たないエージェント**：システムプロンプト、ツール、LLMの単純なループです。ログ調査やドキュメント検索など環境が不要なタスク向けで、低レイテンシかつコスト効率が良いとされています
@@ -284,7 +284,7 @@ LayerX社のAgent基盤 Haro の事例は、この用途に合わせたアーキ
 しかも障害対応中は情報が不完全で、判断の前提が最も揺れている時間帯です。
 
 第7章で扱ったブリンカー型ハーネスの設計を、ここでも適用します。
-MonotaRO社の事例では、エージェント本体に副作用のある操作を許さず、実行の最終決定をコードロジックに通す構造が採られています。
+AIレビューを導入した事例では、エージェント本体に副作用のある操作を許さず、実行の最終決定をコードロジックに通す構造が採られています。
 同じ形を運用側に置きます。
 
 ```text
@@ -320,7 +320,7 @@ MonotaRO社の事例では、エージェント本体に副作用のある操作
 障害対応の成否を最も左右するのは、実は仕組みではありません。
 理解している人がいるかどうかです。
 
-freee社の開発者ブログが指摘する認知負債は、コードは動いているが理解している人間がいない状態を指します。
+認知科学の記事が指摘する認知負債は、コードは動いているが理解している人間がいない状態を指します。
 この負債の性質は、平常時には見えないことです。
 動いているので誰も困りません。
 可視化されるのは障害対応のときです。
@@ -375,7 +375,7 @@ runbookを書くには、そのシステムが何をしていて何が壊れう�
 しかし総量として見ると、動き続けるものの数が増え、パッチを当てる対象が増え、EOSL対応の期限が増えます。
 作る速さは上がりましたが、維持する仕事の量は増えています。
 
-黒田氏の資料では、この対策としてKTLO（Keep The Light On）センターを設けたと報告されています。
+同講演資料では、この対策としてKTLO（Keep The Light On）センターを設けたと報告されています。
 24/365のトラブル対応、パッチ当て、EOSL対応、バージョン管理、問い合わせ対応を担う組織です。
 「70リポジトリ規模のマイクロサービス群」から着手し、AI-OPSをフル活用するベトナムオフショア体制で検証中とされています。
 
@@ -406,17 +406,17 @@ runbookは古くなります。
 
 ## この章のまとめ
 
-- 完全な防止は経済的に成立しません。mtx2s氏の記事が示すとおり、完全な故障防止よりも素早い検知と復旧の設計が現実的であり、問題の本質はレビュー量ではなく信頼性要求に応じた構造の再設計にあります
+- 完全な防止は経済的に成立しません。AIコーディング時代のレビューを論じた記事が示すとおり、完全な故障防止よりも素早い検知と復旧の設計が現実的であり、問題の本質はレビュー量ではなく信頼性要求に応じた構造の再設計にあります
 - 障害の期待コストは「発生確率 × 影響範囲 × 継続時間」で捉えます。防止は1つ目にしか効きません。段階的展開が2つ目、検知と復旧の速さが3つ目に効きます。第6章の3軸のうち可逆性が高い領域は「戻せる」側に寄せ、低い領域は「防ぐ」側を厚くします
-- 段階的展開の道具としてフィーチャーフラグは有効ですが、LayerX社の榎本氏の指摘どおり設定の増加は明確な負債です。フラグは一時的な出荷制御であって恒久的な設定項目ではないと線引きし、削除期限を宣言して入れ、期限切れがあれば新規追加を止めます
+- 段階的展開の道具としてフィーチャーフラグは有効ですが、機能追加の判断を論じた登壇資料の指摘どおり設定の増加は明確な負債です。フラグは一時的な出荷制御であって恒久的な設定項目ではないと線引きし、削除期限を宣言して入れ、期限切れがあれば新規追加を止めます
 - 戻せない変更は一覧として明示し、第6章の線引きで人間が必ず見る側に置きます。同時に、expand and contract のように戻せる変更の列へ分解できないかを設計段階で検討します。不可逆な操作を最後の1段階に閉じ込めれば、実行タイミングを選べます
-- 検知と調査はAIに任せられます。リクルート社のAI-OPS事例やLayerX社のHaroの事例が示すとおり、情報源が揃っていることが前提です。ただし調査と復旧は分け、第7章のブリンカー型ハーネスと同じく不可逆な操作はエージェントに実行させません。障害対応で顕在化する認知負債には、意図を残す、調査を任せられる状態を作る、runbookをスキル化する、の3点で備えます
+- 検知と調査はAIに任せられます。前掲のAI-OPSの事例やAgent基盤を自作した事例が示すとおり、情報源が揃っていることが前提です。ただし調査と復旧は分け、第7章のブリンカー型ハーネスと同じく不可逆な操作はエージェントに実行させません。障害対応で顕在化する認知負債には、意図を残す、調査を任せられる状態を作る、runbookをスキル化する、の3点で備えます
 
 ## 参考
 
-- mtx2s「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
-- リクルート 黒田氏「Developers Summit 2026 Summer 講演資料」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
-- LayerX「Built our own Background Agent at LayerX」 [https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
-- MonotaRO Tech Blog「AIコードレビューの取り組み」 [https://tech-blog.monotaro.com/entry/2026/08/05/090000](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
-- LayerX「Don't build features. Don't take the easy way out.」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
-- freee Developers Hub「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
+- 「AIコーディング時代のコードレビュー」 [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
+- 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+- 「Built our own Background Agent（Agent基盤の自作）」 [https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
+- 「AIコードレビューの取り組み」 [https://tech-blog.monotaro.com/entry/2026/08/05/090000](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
+- 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
+- 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
