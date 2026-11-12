@@ -384,3 +384,4 @@ AIレビューの指摘を却下することは正当な判断です。
 - 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
 - 「AI時代にアーキテクトとテックリードは死んだのか」 [https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era](https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era)
 - 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
+

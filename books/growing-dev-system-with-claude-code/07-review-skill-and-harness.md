@@ -426,3 +426,4 @@ Extra観点セクションに書いた内容は、書いた時点のコードベ
 - [修正PRを食べてレビュースキルが賢くなる Claude Code による自己改善サイクル](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
 - [AIコードレビューの取り組み](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
 - [Developers Summit 2026 Summer 講演資料（品質保証の再設計）](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+

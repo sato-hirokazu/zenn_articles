@@ -464,3 +464,4 @@ Marketplace を通じて、個人の自動化を組織の資産に転換する�
 - 「修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル」 [https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
 - 「Built our own Background Agent（Agent基盤の自作）」 [https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
 - ボトルネックの移動と「着眼大局、着手小局」を論じた記事 [https://agilejourney.uzabase.com/entry/2026/04/23/103000](https://agilejourney.uzabase.com/entry/2026/04/23/103000)
+

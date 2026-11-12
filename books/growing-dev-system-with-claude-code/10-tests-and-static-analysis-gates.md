@@ -514,3 +514,4 @@ AIが書いたテストの信頼性については、期待値の出所を実装
 - 仕様駆動開発を3ヶ月運用した記録 [https://zenn.dev/dely_jp/articles/ef573ae39b9162](https://zenn.dev/dely_jp/articles/ef573ae39b9162)
 - 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
 - 「Claude Code でアーキテクチャ図を生成する」 [https://techblog.zozo.com/entry/architecture-diagram-with-claude-code](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
+

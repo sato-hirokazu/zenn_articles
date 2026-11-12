@@ -319,3 +319,4 @@ CLAUDE.md、Skills、Subagents、Hooks の役割分担が主題です。
 
 - [機能を作るな。楽して作るな。](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
 - [AI活用で変わる開発組織の役割分担](https://levtech.jp/media/detail_899/)
+

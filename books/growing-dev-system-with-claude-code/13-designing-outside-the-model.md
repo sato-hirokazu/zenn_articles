@@ -631,3 +631,4 @@ sqlite3 -header .harness/memory.db "
 - [ハーネスエンジニアリングにどう向き合うか（ルールファイルを超えて開発プロセスを設計する）](https://speakerdeck.com/rkaga/how-to-approach-harness-engineering)
 - [修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル（自己改善サイクルの登壇資料）](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
 - [Developers Summit 2026 Summer 講演資料（品質保証の再設計を論じた登壇資料）](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+

@@ -389,3 +389,4 @@ SEO施策とバッチ処理の差はここにありました。
 - 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」: https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda
 - AI活用で変わる開発組織の役割分担: https://levtech.jp/media/detail_899/
 - 上流工程の速度を報告した記事: https://tech-blog.rakus.co.jp/entry/20260821/ai
+
