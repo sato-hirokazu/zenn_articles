@@ -662,4 +662,3 @@ CLAUDE.md はずれ、観点は陳腐化し、テストは形骸化し、フラ�
 - [修正PRを食べてレビュースキルが賢くなる Claude Codeによる自己改善サイクル（自己改善サイクルの登壇資料）](https://speakerdeck.com/yuyaumetsu/xiu-zheng-prwoshi-heterehiyusukirukaxian-kunaru-claude-codeniyoruzi-ji-gai-shan-saikuru)
 - [ボトルネックの移動と「着眼大局、着手小局」を論じた記事](https://agilejourney.uzabase.com/entry/2026/04/23/103000)
 - [ハーネスエンジニアリングにどう向き合うか（ルールファイルを超えて開発プロセスを設計する）](https://speakerdeck.com/rkaga/how-to-approach-harness-engineering)
-

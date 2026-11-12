@@ -431,4 +431,3 @@ Agentの実績、失敗、feedbackをPlatform側で回収し、Custom Agentや�
 - 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
 - 「AI時代にアーキテクトとテックリードは死んだのか」 [https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era](https://zenn.dev/neko3cs/articles/architect-and-techlead-is-dead-in-the-ai-era)
 - ボトルネックの移動と「着眼大局、着手小局」を論じた記事 [https://agilejourney.uzabase.com/entry/2026/04/23/103000](https://agilejourney.uzabase.com/entry/2026/04/23/103000)
-

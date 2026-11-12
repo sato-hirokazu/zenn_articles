@@ -412,4 +412,3 @@ AIに渡しているテキストはすべて、育てる対象です。
 - [Built our own Background Agent（Agent基盤の自作）](https://speakerdeck.com/layerx/built-our-own-background-agent-at-layerx-number-aidevex-findy)
 - [Claude Codeでアーキテクチャ図を生成する](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
 - [開発現場のエンジニアが語る、AI活用のリアルとこれからのエンジニア像](https://tech.stmn.co.jp/entry/2026/04/08/164725)
-

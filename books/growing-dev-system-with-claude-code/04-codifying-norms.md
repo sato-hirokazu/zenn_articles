@@ -354,4 +354,3 @@ CLAUDE.md は増えていく前提ではなく、上限を決めて運用する�
 - [Developers Summit 2026 Summer 講演資料（品質保証の再設計）](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
 - [Claude Code でアーキテクチャ図を生成する](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
 - [開発現場のエンジニアが語る、AI活用のリアルとこれからのエンジニア像](https://tech.stmn.co.jp/entry/2026/04/08/164725)
-
