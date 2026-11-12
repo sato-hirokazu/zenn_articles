@@ -346,3 +346,4 @@ AIレビューを導入した事例では、AIレビューの導入において�
 - 「AIコーディング時代のコードレビュー」: [https://mtx2s.hatenablog.com/entry/2026/04/06/061511](https://mtx2s.hatenablog.com/entry/2026/04/06/061511)
 - 「AI駆動開発と認知科学」: [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
 - 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」: [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+

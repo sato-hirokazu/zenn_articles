@@ -420,3 +420,4 @@ runbookは古くなります。
 - 「AIコードレビューの取り組み」 [https://tech-blog.monotaro.com/entry/2026/08/05/090000](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
 - 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
 - 「AI駆動開発と認知科学」 [https://developers.freee.co.jp/entry/ai-dev-and-cogsci](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
+

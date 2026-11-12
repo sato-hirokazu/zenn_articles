@@ -255,3 +255,4 @@ CLAUDE.md、Skills、Subagents、Hooks をどう役割分担させるかが主�
 - [AIコードレビューの取り組み](https://tech-blog.monotaro.com/entry/2026/08/05/090000)
 - [AI駆動開発と認知科学](https://developers.freee.co.jp/entry/ai-dev-and-cogsci)
 - [Developers Summit 2026 Summer 講演資料（品質保証の再設計）](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+

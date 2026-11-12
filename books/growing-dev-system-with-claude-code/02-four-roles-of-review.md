@@ -326,3 +326,4 @@ AIに委譲できないというより、委譲するという概念が成立し
 - 「機能を作るな。楽して作るな。（Don't build features. Don't take the easy way out.）」 [https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out](https://speakerdeck.com/mosa_siru/don-t-build-features-dot-don-t-take-the-easy-way-out)
 - 「Claude Codeを活用したアーキテクチャ図の生成」 [https://techblog.zozo.com/entry/architecture-diagram-with-claude-code](https://techblog.zozo.com/entry/architecture-diagram-with-claude-code)
 - 「Developers Summit 2026 Summer 講演資料（品質保証の再設計）」 [https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda](https://speakerdeck.com/recruitengineers/developerssummit2026summer_kuroda)
+
