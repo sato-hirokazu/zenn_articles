@@ -1,0 +1,29 @@
+title: "何を作り、どう合意するか 〜実装もレビューも速くなった後の開発プロセス〜"
+summary: >
+  コーディングエージェントで実装もレビューも速くなった後、開発はどこで詰まるのか。
+  要望の Why、試作による検証、QA の組み直し、決定と合意の進め方を、各社の事例をもとに解説します。
+  『レビューが詰まった後の品質保証』の続編です。
+topics: ["claudecode", "ai", "開発プロセス", "要件定義", "チーム開発"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - 00-preface
+  - 01-writing-why
+  - 02-prototype-before-building
+  - 03-requirements-as-checks
+  - 04-small-units-of-work
+  - 05-test-layer-responsibilities
+  - 06-qa-knowledge-as-assets
+  - 07-separating-test-design
+  - 08-qa-flow-from-quality-bar
+  - 09-quality-in-shared-foundations
+  - 10-deciding-who-decides
+  - 11-sharing-decisions
+  - 12-writing-for-judgment
+  - 13-feedback-that-changes-behavior
+  - 14-sensing-unspoken-concerns
+  - 15-raising-the-baseline
+  - 16-structure-drives-behavior
+  - 17-epilogue
+toc_depth: 2
